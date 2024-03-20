@@ -1,0 +1,62 @@
+image_root: '/home/ldap-users/s2220411/Code/new_explore_tts/Show-and-Speak/Data_for_SAS/images'
+wavs_root: '/home/ldap-users/s2220411/Code/new_explore_tts/Show-and-Speak/Data_for_SAS/speech_data/vn_speech/wavs'
+path_unit: '/home/ldap-users/s2220411/Code/new_explore_tts/Show-and-Speak/Data_for_SAS/unit_flickr8k_ResDAVEnet_vq3_vn'
+
+# size of vit model; base or large
+vit: 'base'
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+batch_size:  24 #24
+init_lr: 1e-5
+
+# vit: 'large'
+# vit_grad_ckpt: True
+# vit_ckpt_layer: 5
+# batch_size: 16
+# init_lr: 2e-6
+
+image_size: 384
+
+# generation configs
+max_length: 50
+min_length: 5
+num_beams: 3
+
+# optimizer
+weight_decay: 0.5 #0.5, 0.8
+min_lr: 0
+
+# early_stop
+early_stop: 3
+# df-gan
+imsize: 256
+z_dim: 100
+cond_dim: 256 #1792 #1024
+manual_seed: 100
+cuda: True
+
+stamp: 'normal'
+state_epoch: 0
+max_epoch: 301
+#max_epoch: 10
+nf: 32
+ch_size: 3
+model: base
+gen_interval: 1
+test_interval: 1
+save_interval: 5
+real_test_interval: 15
+truncation: True
+trunc_rate: 0.88
+sample_times: 1
+npz_path: ../data/flick8k/npz/val.npz
+
+#path_url: "/home/ldap-users/s2220411/Code/new_explore_tts/BLIP/output/paper_abslation_study/num_hidden_layers/flick8k_audio_ft_all_6k_vq3_VIT_LLM_num_hidden_layers_4/best.pth"
+#path_url: "/home/ldap-users/s2220411/Code/new_explore_tts/BLIP/output/paper_abslation_study/num_hidden_layers/flick8k_audio_ft_all_6k_vq3_VIT_LLM_num_hidden_layers_3/best.pth"
+path_url: "/home/ldap-users/s2220411/Code/new_explore_tts/BLIP/output/paper_abslation_study/num_hidden_layers/flick8k_audio_ft_all_6k_vq3_VIT_LLM_num_hidden_layers_2/best.pth"
+#path_url: "/home/ldap-users/s2220411/Code/new_explore_tts/BLIP/output/paper_abslation_study/num_hidden_layers/flick8k_audio_ft_all_6k_vq3_VIT_LLM_num_hidden_layers_1/best.pth"
+
+### tacotron2 model
+tacotron2_path: "/home/ldap-users/s2220411/Code/new_explore/tacotron2/outdir/flickr8k_ResDAVEnet_vq3_v2/checkpoint_100000.pth"
+reference_path: "/home/ldap-users/Share/Corpora/Spoken_Image/Flickr8k_SAS/Data_for_SAS/captions.txt"
+med_config: "/home/ldap-users/s2220411/Code/new_explore_tts/BLIP/configs/2layer"
