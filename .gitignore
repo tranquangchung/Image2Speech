@@ -26,3 +26,4 @@ data/*
 !data/__init__.py
 Transformer_TTS
 transform
+tmp/*
