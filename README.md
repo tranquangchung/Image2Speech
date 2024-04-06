@@ -4,13 +4,13 @@ Overview of the pipeline for Image to Speech
 <img src="resource/Overview.png" width="400", class="center", >
 </p>
 
-## Training mode
+## Training
 we will update soon
 
-## Inference mode
+## Inference
 
-## Evaluation mode
-Some examples of the model
+
+### Some examples of the model
 <p align="center">
 <img src="resource/ExampleI2S_Cap.png">
 </p>
