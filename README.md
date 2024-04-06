@@ -1,7 +1,7 @@
 # Image to Speech
 Overview of the pipeline for Image to Speech
 <p align="center">
-<img src="resource/Overview.png" width="300", class="center", >
+<img src="resource/Overview.png" width="400", class="center", >
 </p>
 
 ## Training mode
